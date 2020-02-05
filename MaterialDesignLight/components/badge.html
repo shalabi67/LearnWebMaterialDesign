@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Learning MDL</title>
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body{
+            padding: 20px;
+        }
+        .container{
+            margin: 0 auto;
+            width: 600px;
+        }
+        .example{
+            margin-top: 30px;
+        }
+
+        .inline{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1 style="color: #666;" >Material Design Badges</h1>
+
+        <div class="material-icons mdl-badge" data-badge="1">account_box</div>
+
+
+        <div class="example">
+
+            <a href="#" class="mdl-badge" data-badge="5">
+                This link has a badge.
+            </a>
+        </div>
+
+        <div class="example">
+
+            <a href="#" class="mdl-badge mdl-badge--no-background" data-badge="5">
+                This badge has no background color.
+            </a>
+        </div>
+
+        <div class="example">
+
+            <div class="mdl-badge inline" data-badge="&copy">This badge has icon data.</div>
+        </div>
+
+        <p>Padge should be used with inline elements. </p>
+        <div class="mdl-badge" data-badge="4">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored ">Badge</button>
+        </div>
+        <p>To fix this use inline block style on div</p>
+        <div class="mdl-badge inline" data-badge="4">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored ">Badge</button>
+        </div>
+    </div>
+</body>
+</html>
