@@ -3,12 +3,19 @@ import {MDCTabBar} from '@material/tab-bar';
 import {MDCTextField} from '@material/textfield';
 import {MDCSelect} from '@material/select';
 import {MDCChipSet} from '@material/chips';
+import {MDCDrawer} from "@material/drawer";
 import states from './states.json';
 
 const topAppBar = new MDCTopAppBar(document.querySelector('.mdc-top-app-bar'));
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 
+topAppBar.listen('MDCTopAppBar:nav', () => {
+    console.log('menu clicked state of drawer ' + drawer.open);
+    drawer.open = !drawer.open;
+});
 tabBar.listen('MDCTabBar:activated', (activatedEvent) => {
+    console.log('tab clicked');
     document.querySelectorAll('.adopt-a-pup-body').forEach((element, index) => {
         if (index === activatedEvent.detail.index) {
             element.classList.remove('adopt-a-pup-body--hidden');
