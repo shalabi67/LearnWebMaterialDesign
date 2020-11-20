@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>aDopt a Pup!</title>
+    <meta name="description" content="A sample app to help you get started with Material Theming and Components on the web">
+    <link rel="stylesheet" href="bundle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/a896fd72-865f-434a-b620-d564f4cf0b12%2Ffavicon.ico" type="image/x-icon">
+    <!-- Change theme-color to your primary theme color -->
+    <meta name="theme-color" content="#880e4f">
+</head>
+<body>
+<header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+            <span class="mdc-top-app-bar__title">Page title</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">favorite</button>
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+            <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+        </section>
+    </div>
+</header>
+
+<div>
+<aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__header">
+        <h3 class="mdc-drawer__title">Mail</h3>
+        <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+    </div>
+    <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+            <a class="mdc-list-item mdc-list-item--activated" href="#" aria-current="page" tabIndex="0">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
+                <span class="mdc-list-item__text">Inbox</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
+                <span class="mdc-list-item__text">Outgoing</span>
+            </a>
+            <a class="mdc-list-item" href="#">
+                <span class="mdc-list-item__ripple"></span>
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
+                <span class="mdc-list-item__text">Drafts</span>
+            </a>
+        </nav>
+    </div>
+</aside>
+<div class="mdc-drawer-scrim"></div>
+</div>
+
+
+<div class="adopt-form adopt-form--hidden">
+    <div class="adopt-form__animating-container">
+        <p class="mdc-typography--caption">Interested in adopting a pup? Send us your contact info and we'll be in touch!</p>
+        <div class="mdc-text-field adopt-form__input-field">
+            <input type="text" required id="fullname-text-field" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="fullname-text-field">Full Name</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+
+        <div class="mdc-text-field adopt-form__input-field">
+            <input type="number" required id="my-text-field" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="my-text-field">Phone</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+
+        <div class="mdc-select adopt-form__input-field">
+            <input type="hidden" name="enhanced-select">
+            <i class="mdc-select__dropdown-icon"></i>
+            <div class="mdc-select__selected-text"></div>
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface">
+                <ul class="mdc-list adopt-form__states">
+                    <li class="mdc-list-item mdc-list-item--selected" data-value="" aria-selected="true"></li>
+                </ul>
+            </div>
+            <span class="mdc-floating-label">State</span>
+            <div class="mdc-line-ripple"></div>
+        </div>
+
+        <p class="mdc-typography--caption">When should we call you?</p>
+        <div class="mdc-chip-set mdc-chip-set--choice">
+            <div class="mdc-chip" tabindex="0">
+                <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">wb_sunny</i>
+                <div class="mdc-chip__text">Morning</div>
+            </div>
+            <div class="mdc-chip" tabindex="-1">
+                <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">beach_access</i>
+                <div class="mdc-chip__text">Afternoon</div>
+            </div>
+            <div class="mdc-chip" tabindex="-1">
+                <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">brightness_1</i>
+                <div class="mdc-chip__text">Evening</div>
+            </div>
+            <div class="mdc-chip" tabindex="-1">
+                <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">brightness_3</i>
+                <div class="mdc-chip__text">After
+                    <a class="adopt-form__link" target="_blank" rel="noreferrer" href="https://yt.be/centered">Survivor</a></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="bundle.js" async></script>
+</html>
